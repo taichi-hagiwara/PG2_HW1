@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C: build active file",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "mkdir -p build && gcc -Wall -Wextra -O2 \"${file}\" -o \"build/${fileBasenameNoExtension}\""
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "C: run active file",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "\"./build/${fileBasenameNoExtension}\""
+      ],
+      "dependsOn": "C: build active file",
+      "problemMatcher": []
+    }
+  ]
+}
