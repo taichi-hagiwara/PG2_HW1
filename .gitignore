@@ -1,0 +1,20 @@
+# VS Code
+.vscode/
+
+# C build outputs
+build/
+bin/
+out/
+*.o
+*.obj
+*.out
+a.out
+a.exe
+*.exe
+
+# Python venv
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
